@@ -120,7 +120,7 @@ padding: 50px;
 
 
 
-  
+  <div class="container">
 
 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner">
@@ -190,30 +190,21 @@ padding: 50px;
 <!-- DEALS SECTION -->
 
 
-
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="dealsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
   <div class="carousel-inner">
-<section>
-  <div class="carousel-item active">
-    <img src="https://media.istockphoto.com/id/1861392605/photo/colorful-carpet-samples-in-the-store.jpg?s=612x612&w=0&k=20&c=xFCxVc33M3KXnim5r_r8j110nDPk4R65N2fE4N_orOc=" class="d-block w-100" alt="responsive image">
-
-    <!-- Festive season deals section -->
-<section class="festive-banner">
-<div class="container text-center">
-
-<h2 class="festive-title">FESTIVE SEASON DEALS</h2>
-<p class="festive-title">LIMITED DISCOUNT ON SELECTED PRODUCTS</p>
-<button class="btn btn-dark shop-now-btn">SHOP NOW</button>
-<p class="disclaimer">The limited discount is valid a limited number of products and sizes</p>
-
+    <div class="carousel-item active position-relative">
+      <img src="https://media.istockphoto.com/id/1861392605/photo/colorful-carpet-samples-in-the-store.jpg?s=612x612&w=0&k=20&c=xFCxVc33M3KXnim5r_r8j110nDPk4R65N2fE4N_orOc=" class="d-block w-100" alt="responsive image">
+      
+      <!-- Overlay Festive Banner -->
+      <div class="festive-banner text-center">
+        <h2 class="festive-title">FESTIVE SEASON DEALS</h2>
+        <p class="festive-subtitle">LIMITED DISCOUNT ON SELECTED PRODUCTS</p>
+        <button class="btn btn-dark shop-now-btn">SHOP NOW</button>
+        <p class="disclaimer">The limited discount is valid a limited number of products and sizes</p>
+      </div>
+    </div>
+  </div>
 </div>
-</section>
-
-  </div>
-  </div>
-  </div>
-
-</section>
 
 <br><br>
 
@@ -222,7 +213,7 @@ padding: 50px;
 
 <section>
 
-  <div class="bg-body-secondary">
+  <div>
   
   <div class="row">
   <h1 style="font-weight: bolder;" class="text-center">Featured Products</h1>
@@ -372,14 +363,8 @@ padding: 50px;
       </div>
     </section>
     </main>
-    
 
 
-
-
-
-  
-
-
+  </div>
 
 {% endblock %}
