@@ -1,34 +1,384 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% block title %}  Homepage     {% endblock %} 
+<style>
+.festive-banner {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(71, 70, 70, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  
+  }
+  
+.festive-title {
 
-<div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
+font-size: 2rem;
+font-weight: 700;
+color: #2bd68f;
+margin-bottom: 1rem;
+text-transform: uppercase;
+}
+
+.festive-subtitle {
+
+font-size: 1.2rem;
+font-weight: 600;
+color: #1d549b;
+margin-bottom: 1.5rem;
+
+
+}
+.shop-now-btn {
+  background-color: #ca6fff;
+  color: white;
+  padding: 12px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.disclaimer{
+font-size: 0.8rem;
+color: #fdff70;
+margin-top: 1rem;
+}
+
+.carousel-item {
+  height: 500px;
+  position: relative;
+}
+.carousel-item img {
+object-fit: cover;
+height: 100%;
+}
+.collection banner {
+background-color: f8f9fa;
+padding: 5rem 0;
+text-align: center;
+position: relative;
+}
+
+.collection-header{
+font-size: 1.8rem;
+font-weight: 300;
+letter-spacing: 3px;
+text-transform: uppercase;
+margin-bottom: 1rem;
+color:#555;
+}
+.collection-name{
+font-size: 4rem;
+font-weight: 700;
+letter-spacing: 1px;
+
+margin-bottom: 2rem;
+color:#000;
+position: relative;
+display: inline-block;
+}
+
+.collection-name::after{
+font-size: 4rem;
+font-weight: 700;
+letter-spacing: 1px;
+
+margin-bottom: 2rem;
+color:#000;
+bottom: -10px;
+left: 50%;
+transform: translate(-50%);
+width: 80px;
+height: 3px;
+position: absolute;
+background-color: #d62b2b;
+}
+
+
+.hero-section {
+position: relative;
+text-align: left;
+padding: 50px;
+}
+
+  
+  
+  
+  </style>
+
+
+
+
+
+
+  
+
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
     <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+
       <div class="carousel-item active">
-        <img src=".https://media.istockphoto.com/id/1861392605/photo/colorful-carpet-samples-in-the-store.jpg?s=612x612&w=0&k=20&c=xFCxVc33M3KXnim5r_r8j110nDPk4R65N2fE4N_orOc=.." class="d-block w-100" alt="responsive image">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="https://media.istockphoto.com/id/1861392605/photo/colorful-carpet-samples-in-the-store.jpg?s=612x612&w=0&k=20&c=xFCxVc33M3KXnim5r_r8j110nDPk4R65N2fE4N_orOc=" class="d-block w-100" alt="Carpet Samples">
+          </div>
+          <div class="col-md-6">
+            <div class="p-4">
+              <h2>Stylish Carpet Designs</h2>
+              <p>Explore our wide range of stylish carpet samples that fit every interior.</p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+  
+      <!-- Slide 2 -->
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="https://media.istockphoto.com/id/171264666/photo/installer-using-carpet-knife-to-tuck-new-floor.jpg?s=612x612&w=0&k=20&c=XcEsN5n5E0sh8vNmwTlh11IDDpoGQ0hvBe9qdTFnWLw=" class="d-block w-100 h-100" alt="Carpet Installation">
+          </div>
+          <div class="col-md-6">
+            <div class="p-4">
+              <h2>Professional Installation</h2>
+              <p>Precision carpet fitting by our trained experts ensures a flawless finish.</p>
+            </div>
+          </div>
+        </div>
       </div>
+  
+      <!-- Slide 3 -->
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="https://media.istockphoto.com/id/1417833187/photo/professional-cleaner-vacuuming-a-carpet.jpg?s=612x612&w=0&k=20&c=5h8NBR190d46Ni4MclqJ7Zf9ZOtf3TM3gPRJaHUdMjk=" class="d-block w-100" alt="Carpet Cleaning">
+          </div>
+          <div class="col-md-6">
+            <div class="p-4">
+              <h2>Deep Carpet Cleaning</h2>
+              <p>Enjoy a cleaner, healthier home with our deep-cleaning carpet services.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  
+    <!-- Controls (optional) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+
+
+<!-- DEALS SECTION -->
+
+
+
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+<section>
+  <div class="carousel-item active">
+    <img src="https://media.istockphoto.com/id/1861392605/photo/colorful-carpet-samples-in-the-store.jpg?s=612x612&w=0&k=20&c=xFCxVc33M3KXnim5r_r8j110nDPk4R65N2fE4N_orOc=" class="d-block w-100" alt="responsive image">
+
+    <!-- Festive season deals section -->
+<section class="festive-banner">
+<div class="container text-center">
+
+<h2 class="festive-title">FESTIVE SEASON DEALS</h2>
+<p class="festive-title">LIMITED DISCOUNT ON SELECTED PRODUCTS</p>
+<button class="btn btn-dark shop-now-btn">SHOP NOW</button>
+<p class="disclaimer">The limited discount is valid a limited number of products and sizes</p>
+
+</div>
+</section>
+
+  </div>
+  </div>
+  </div>
+
+</section>
+
+<br><br>
+
+<!-- SOLD-OUT DEALS SECTION -->
+
+
+<section>
+
+  <div class="container bg-body-secondary">
+  
+  <div class="row">
+  <h1 style="font-weight: bolder;" class="text-center">Featured Products</h1>
+  
+  
+  <div class="card" style="width: 16rem;">
+      <img src="https://media.istockphoto.com/id/2151202985/photo/chic-entrance-hall.jpg?s=612x612&w=0&k=20&c=nWCLOrBbokDWWxCMuvM-kj3pkFEH7N6zIzut1rrj1R0=" class="card-img-top" alt="music production">
+      <div class="card-body">
+        <p class="card-text">Alin Abstract Carpet</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 16rem;">
+      <img src="https://media.istockphoto.com/id/1472249537/photo/side-view-of-an-elegant-living-room-with-a-beige-sofa-and-decoration-and-windows-with.jpg?s=612x612&w=0&k=20&c=glKZNUp4zfVWfBpgtJ337TPjxVk8RlO1mzv3CkIzL6I=" class="card-img-top" alt="drumming lesson">
+      <div class="card-body">
+        <p class="card-text">Alin Beige Gold Carpet</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 16rem;">
+      <img src="https://media.istockphoto.com/id/155144417/photo/red-felt-plush-carpet-or-velvet-background.webp?s=1024x1024&w=is&k=20&c=5xf2HOxJRnvP3h1QoFFvI3biJR52e2UT8ZPbn5C7Xqw=" class="card-img-top" alt="piano lesson">
+      <div class="card-body">
+        <p class="card-text">Alin Beige Dream Carpet</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 16rem;">
+      <img src="https://media.istockphoto.com/id/1394384648/photo/empty-commercial-business-office-interior-space-view-in-urban-city-downtown.jpg?s=612x612&w=0&k=20&c=A3snN7IF8c7QLg_0AgKJzU0_MMdwmjer66UkdiolAYU=" class="card-img-top" alt="guitar lesson">
+      <div class="card-body">
+        <p class="card-text">Alin Beige pink Carpet</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 16rem;">
+      <img src="https://media.istockphoto.com/id/515529200/photo/carpet-swatches-in-a-shop.jpg?s=612x612&w=0&k=20&c=kgu7k8m6hpYD706Z0kFDvK7X0m5sWMXQea26IEn285U=" class="card-img-top" alt="djing lesson">
+      <div class="card-body">
+        <p class="card-text">Alin Beige Glow Carpet</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+  
+  </div>
+  
+  </div>
+  </section>
+
+
+
+
+  <main>
+    <section>
+      <div class="container">
+        <h1 class="display-1">Explore Our Products</h1>
+    <div class="row">
+      <div class="card" style="width: 18rem;">
+        <img src="https://www.istockphoto.com/photo/texture-grey-carpet-with-square-ornament-gm2148628537-569804082" class="card-img-top" alt="responsive image">
+        <div class="card-body">
+         
+            <h5 class="card-title">Grey Standard wall to wall carpet</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>3000</h5>
+          <p class="card-text"> an extremely durable fiber, making it an excellent choice for heavy-traffic areas as well as easy to clean and maintain. </p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/id/1521438374/photo/bed-and-rug-in-the-bedroom.jpg?s=612x612&w=0&k=20&c=eNfVGP6RcpUAW2-VUox-5r44cDvK-dxVGFP_v5zkfng=" class="card-img-top" alt="responsive image">
+        <div class="card-body">
+         
+            <h5 class="card-title">Neon shoes-nike</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>3500</h5>
+          
+          <p class="card-text">Triexta is a newer carpet yarn noted for its durability and stain resistance. Polyester is not as durable as nylon, but it is stain-resistant.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    
+      <div class="card" style="width: 18rem;">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+         
+            <h5 class="card-title">Oraimo-Headphones</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>  5000</h5>
+       
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+         
+            <h5 class="card-title">Samsung Tv</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>  35000</h5>
+        
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+      
+      <div class="card" style="width: 18rem;">
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+         
+            <h5 class="card-title">Casio Men Watch</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>1000</h5>
+       
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/id/469634594/photo/twisted-artificial-green-grass-isolated-on-white.jpg?s=612x612&w=0&k=20&c=YkJw5bt21x75MT1X5GmQVK00l-UXbAyPkSVLuASIJ7M=" class="card-img-top" alt="grass carpet">
+        <div class="card-body">
+         
+            <h5 class="card-title">Artificial green grass carpet</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>  3500</h5>
+        
+          <p class="card-text">Grass Carpet/Artificial Grass Carpet - 40mm / Per Mtr Squared Green Grass Mat Turf Carpets 2by0.5. KSh 3500</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/id/613672558/photo/carpet-rolls-trowed-out-for-garbage.jpg?s=612x612&w=0&k=20&c=6OQdQl-m0Q2v4TZ-NrCGf0MtTdT9Rly0EawTobODP6Y=" class="card-img-top" alt="rolled carpets">
+        <div class="card-body">
+         
+            <h5 class="card-title">Floor Carpet</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>  4000</h5>
+         
+          <p class="card-text">Original Hard Carpet Heavyweight One Yard/Waterproof floor carpet
+          </p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://media.istockphoto.com/id/2199527715/photo/close-up-of-prayer-mat-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=2WdEbUpuPy6MmjNtxCsDqmaYNn1LR_rD0v5wdJilMtI=" class="card-img-top" alt="responsive image">
+        <div class="card-body">
+         
+            <h5 class="card-title">Hairy Rug Pillow Carpet</h5> <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>  2500</h5>
+        
+          <p class="card-text"> Domus Outdoor Pillow; (65×105)cm, Orange/Blue · Domus: Outdoor Leave pattern Pillow for a comfortable nap</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </section>
+    </main>
+    
+
+
+
+
+
+  
 
 
 
