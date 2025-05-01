@@ -37,7 +37,15 @@ sort by:
 </div>
 
 
-
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for product in products %}
+    <div class="card h-100">
+        <img src="{{ product.image}}" alt="{{  product.name}}" class="card-img-top">
+        {% if product.sold_out %}
+        <span class="badge bg-dark position-absolute top-0 end-0 m-2">Sold out</span>
+        {% endif %}
+    </div>
+</div>
 
 
 
