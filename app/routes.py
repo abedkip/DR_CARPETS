@@ -29,10 +29,10 @@ def deals():
             "name": "8,049.00",
             "sold_out": True,
             "url": "#"
-        }
+        },
           {
             "name": "Alin Abstract Carpet",
-            "image": "/static/images/image1.jpg",
+            "image": "/static/images/image3.jpg",
             "old_price": "11,929.00",
             "name": "8,049.00",
             "sold_out": True,
@@ -40,12 +40,12 @@ def deals():
         },
         {
               "name": "Alin Beige Dream Carpet",
-            "image": "/static/images/image3.jpg",
+            "image": "/static/images/image4.jpg",
             "old_price": "11,929.00",
             "name": "8,049.00",
             "sold_out": True,
             "url": "#"
-        }
+        },
           {
             "name": "Alin Abstract Glow Carpet",
             "image": "/static/images/image1.jpg",
@@ -55,7 +55,7 @@ def deals():
             "url": "#"
         },
         {
-              "name": "Alin Beige Dream Gold Carpet",
+            "name": "Alin Beige Dream Gold Carpet",
             "image": "/static/images/image4.jpg",
             "old_price": "11,929.00",
             "name": "8,049.00",
@@ -67,7 +67,7 @@ def deals():
         
         
         
-    ]
+           ]
     
     colors = ["A.Bej/A.Bej", "A.Gri/A.Gri", "A.Gri/A.Mavi", "A.Gri/Beyaz"]
     
