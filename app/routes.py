@@ -12,7 +12,7 @@ def test():
 
 
 @app.route('/deals')
-def deals():
+def dr_deals():
     products = [
         {
             "name": "Alin Abstract Carpet",
