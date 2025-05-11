@@ -6,53 +6,32 @@ from flask import render_template
 def Home():
     return render_template('homepage.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 # COLORS DROPDOWN
 @app.route('/color/black')
-def show_black():
+def black():
     return render_template('black.html')
 
 @app.route('/color/blue')
-def show_blue():
+def blue():
     return render_template('blue.html')
 
+@app.route('/color/grey')
+def grey():
+    return render_template('grey.html')
+
+@app.route('/color/red')
+def red():
+    return render_template('red.html')
 
 
 
 
 
 
-
-
-
-# # black
-# @app.route('/colors/<color_name>')
-# def show_color(color_name):
-#     # Basic validation and fallback
-#     valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-#     if color_name.lower() not in valid_colors:
-#         return f"Color '{color_name}' not found", 404
-
-#     return render_template('black.html', color=color_name.lower())
-
-# # blue
-# @app.route('/colors/<blue>')
-# def blue_color(color_name):
-#     # Basic validation and fallback
-#     valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-#     if color_name.lower() not in valid_colors:
-#         return f"Color '{color_name}' not found", 404
-
-# # grey
-#     return render_template('blue.html', color=color_name.lower())
-# @app.route('/colors/<grey>')
-# def grey_color(color_name):
-#     # Basic validation and fallback
-#     valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-#     if color_name.lower() not in valid_colors:
-#         return f"Color '{color_name}' not found", 404
-
-#     return render_template('grey.html', color=color_name.lower())
 
 
 # DR_DEALS ROUTE
