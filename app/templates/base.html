@@ -27,7 +27,10 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{url_for('dr_deals') }}">DR DEALS</a>
           </li>
-      
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{url_for('about') }}">About Us</a>
+          </li>
+         
   
 <!-- DROPDOWNS -->
 
@@ -40,12 +43,13 @@
         Colors
       </a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='black') }}">Black</a></li>
-        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='blue') }}">Blue</a></li>
-        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='brown') }}">Brown</a></li>
-        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='red') }}">Red</a></li>
-        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='grey') }}">Grey</a></li>
+        
+          <li><a class="dropdown-item" href="{{ url_for('black', color_name='black') }}">black</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('blue', color_name='blue') }}">blue</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('red', color_name='red') }}">red</a></li>
+          <li><a class="dropdown-item" href="{{ url_for('grey', color_name='grey') }}">grey</a></li>
       </ul>
+      
     </li>
  
 
