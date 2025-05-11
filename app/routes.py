@@ -8,34 +8,51 @@ def Home():
 
 
 # COLORS DROPDOWN
-# black
-@app.route('/colors/<color_name>')
-def show_color(color_name):
-    # Basic validation and fallback
-    valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-    if color_name.lower() not in valid_colors:
-        return f"Color '{color_name}' not found", 404
+@app.route('/color/black')
+def show_black():
+    return render_template('black.html')
 
-    return render_template('black.html', color=color_name.lower())
+@app.route('/color/blue')
+def show_blue():
+    return render_template('blue.html')
 
-# blue
-@app.route('/colors/<blue>')
-def blue_color(color_name):
-    # Basic validation and fallback
-    valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-    if color_name.lower() not in valid_colors:
-        return f"Color '{color_name}' not found", 404
 
-# grey
-    return render_template('blue.html', color=color_name.lower())
-@app.route('/colors/<grey>')
-def grey_color(color_name):
-    # Basic validation and fallback
-    valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-    if color_name.lower() not in valid_colors:
-        return f"Color '{color_name}' not found", 404
 
-    return render_template('grey.html', color=color_name.lower())
+
+
+
+
+
+
+
+# # black
+# @app.route('/colors/<color_name>')
+# def show_color(color_name):
+#     # Basic validation and fallback
+#     valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
+#     if color_name.lower() not in valid_colors:
+#         return f"Color '{color_name}' not found", 404
+
+#     return render_template('black.html', color=color_name.lower())
+
+# # blue
+# @app.route('/colors/<blue>')
+# def blue_color(color_name):
+#     # Basic validation and fallback
+#     valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
+#     if color_name.lower() not in valid_colors:
+#         return f"Color '{color_name}' not found", 404
+
+# # grey
+#     return render_template('blue.html', color=color_name.lower())
+# @app.route('/colors/<grey>')
+# def grey_color(color_name):
+#     # Basic validation and fallback
+#     valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
+#     if color_name.lower() not in valid_colors:
+#         return f"Color '{color_name}' not found", 404
+
+#     return render_template('grey.html', color=color_name.lower())
 
 
 # DR_DEALS ROUTE
