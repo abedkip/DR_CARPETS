@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}  About Us  {% endblock %}
+{% block content %}
+
+<style>
+    .about-header {
+      background: url('your-image.jpg') center center / cover no-repeat;
+      height: 300px;
+      position: relative;
+      color: white;
+    }
+    .about-header h1 {
+      position: absolute;
+      bottom: 20px;
+      left: 50px;
+      font-size: 60px;
+      font-weight: bold;
+    }
+    .section-title {
+      font-family: 'Cursive', sans-serif;
+      font-size: 1.5rem;
+      color: gold;
+    }
+    .section-subtitle {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="about-header d-flex align-items-end">
+    <h1>ABOUT US</h1>
+  </div>
+
+  <!-- About Us Content -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Left Column: Our History -->
+      <div class="col-md-6">
+        <p class="section-title">The heritage</p>
+        <p class="section-subtitle">OUR HISTORY</p>
+        <p>
+          Back in the late ’40s, a young man started trading in wholesale suiting materials...
+        </p>
+        <p>
+          Passionate to make their house a home and make these designs available to others...
+        </p>
+      </div>
+
+      <!-- Right Column: Today -->
+      <div class="col-md-6">
+        <p class="section-title">Continuing legacy</p>
+        <p class="section-subtitle">TODAY</p>
+        <p>
+          Tile & Carpet Centre has grown to become one of Kenya’s premier suppliers of interior finishing products...
+        </p>
+        <p>
+          We have been in the industry for over 30 years and provide services across 4 continents...
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Our Mission Section -->    
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="section-title">Our Mission</p>
+          <p class="section-subtitle">OUR MISSION</p>
+          <p>
+            To be the leading supplier of quality carpets and flooring solutions in Kenya and beyond...
+          </p>
+        </div>
+
+        <!-- Right Column: Our Vision -->
+        <div class="col-md-6">
+          <p class="section-title">Our Vision</p>
+          <p class="section-subtitle">OUR VISION</p>
+          <p>
+            To be the most trusted and innovative provider of flooring solutions in the region...
+          </p>
+        </div>
+      </div>
+
+      {% endblock %}
