@@ -26,7 +26,7 @@ def blue_color(color_name):
     if color_name.lower() not in valid_colors:
         return f"Color '{color_name}' not found", 404
 
-    return render_template('color.html', color=color_name.lower())
+    return render_template('blue.html', color=color_name.lower())
 
 
 @app.route('/deals')
