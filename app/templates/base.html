@@ -29,23 +29,28 @@
           </li>
       
   
+<!-- DROPDOWNS -->
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-             Colors
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Black</a></li>
-              <li><a class="dropdown-item" href="#">Blue</a></li>
-              <li><a class="dropdown-item" href="#">Brown</a></li>
-              <li><a class="dropdown-item" href="#">Red</a></li>
-              <li><a class="dropdown-item" href="#">Grey</a></li>
-            
-            </ul>
-          </li>
+<!-- COLORS DROPDOWN -->
 
 
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Colors
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='black') }}">Black</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='blue') }}">Blue</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='brown') }}">Brown</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='red') }}">Red</a></li>
+        <li><a class="dropdown-item" href="{{ url_for('show_color', color_name='grey') }}">Grey</a></li>
+      </ul>
+    </li>
+ 
 
+
+<!-- STYLES DROPDOWN -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Styles
@@ -58,7 +63,7 @@
             </ul>
           </li>
 
-
+<!-- SIZES DROPDOWN -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sizes
