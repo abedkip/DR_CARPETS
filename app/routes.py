@@ -27,14 +27,7 @@ def blue_color(color_name):
         return f"Color '{color_name}' not found", 404
 
     return render_template('blue.html', color=color_name.lower())
-@app.route('/colors/<blue>')
-def blue_color(color_name):
-    # Basic validation and fallback
-    valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
-    if color_name.lower() not in valid_colors:
-        return f"Color '{color_name}' not found", 404
 
-    return render_template('grey.html', color=color_name.lower())
 
 
 @app.route('/deals')
