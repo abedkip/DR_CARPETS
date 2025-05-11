@@ -8,6 +8,7 @@ def Home():
 
 
 # COLORS DROPDOWN
+# black
 @app.route('/colors/<color_name>')
 def show_color(color_name):
     # Basic validation and fallback
@@ -17,6 +18,15 @@ def show_color(color_name):
 
     return render_template('black.html', color=color_name.lower())
 
+# blue
+@app.route('/colors/<blue>')
+def blue_color(color_name):
+    # Basic validation and fallback
+    valid_colors = ['black', 'blue', 'brown', 'red', 'grey']
+    if color_name.lower() not in valid_colors:
+        return f"Color '{color_name}' not found", 404
+
+    return render_template('color.html', color=color_name.lower())
 
 
 @app.route('/deals')
