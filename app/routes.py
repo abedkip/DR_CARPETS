@@ -27,6 +27,11 @@ def grey():
 def red():
     return render_template('red.html')
 
+# CARPETS STYLES DROPDOWN
+@app.route('/Classic Carpets')
+def classic_carpets():
+    return render_template('classic_carpets.html')
+
 
 
 
