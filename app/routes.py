@@ -40,6 +40,11 @@ def modern_carpets():
 def turkish_carpets():
     return render_template('turkish_carpets.html')
 
+# CARPET SIZES DROPDOWN
+
+@app.route('/4ft x 6ft')
+def ft_4x6():
+    return render_template('4ft_6ft.html')
 
 
 
