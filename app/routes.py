@@ -32,7 +32,13 @@ def red():
 def classic_carpets():
     return render_template('classic_carpets.html')
 
+@app.route('/Modern Carpets')
+def modern_carpets():
+    return render_template('modern_carpets.html')
 
+@app.route('/Turkish Carpets')
+def turkish_carpets():
+    return render_template('turkish_carpets.html')
 
 
 
