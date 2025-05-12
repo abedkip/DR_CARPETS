@@ -47,7 +47,13 @@ def ft_4x6():
     return render_template('4ft_6ft.html')
 
 
+@app.route('/5ft x 8ft')
+def ft_5x8():
+    return render_template('5ft_8ft.html')
 
+@app.route('/6ft x 9ft')
+def ft_6x9():
+    return render_template('6ft_9ft.html')
 
 
 # DR_DEALS ROUTE
