@@ -59,6 +59,11 @@ def ft_6x9():
 def ft_7x10():
     return render_template('7ft_10ft.html')
 
+# faq route
+@app.route('/faqs')
+def faqs():
+    return render_template('faqs.html')
+
 # DR_DEALS ROUTE
 @app.route('/deals')
 def dr_deals():
