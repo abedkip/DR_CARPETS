@@ -1,5 +1,6 @@
-from app import app
-from flask import render_template
+from app import app, db
+from flask import render_template, session
+from app.models import CartItem  # Import the CartItem model
 
 
 @app.route('/')
@@ -126,3 +127,53 @@ def dr_deals():
     colors = ["A.Bej/A.Bej", "A.Gri/A.Gri", "A.Gri/A.Mavi", "A.Gri/Beyaz"]
     
     return render_template("dr_deals.html", products=products, colors=colors)
+
+
+
+# REGISTRATION ROUTE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Add item to cart
+def add_to_basket(product_id, quantity):
+    cart = session.get('cart', {})
+    cart[product_id] = cart.get(product_id, 0) + quantity
+    session['cart'] = cart
+
+# Get cart
+def get_cart():
+    return session.get('cart', {})
+
+# Adding to cart
+def add_to_cart(user_id, product_id, quantity):
+    item = CartItem.query.filter_by(user_id=user_id, product_id=product_id).first()
+    if item:
+        item.quantity += quantity
+    else:
+        item = CartItem(user_id=user_id, product_id=product_id, quantity=quantity)
+        db.session.add(item)
+    db.session.commit()
