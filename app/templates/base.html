@@ -110,6 +110,17 @@
   
   </nav>
 
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+      <div class="alert alert-{{category}}">
+          {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+   {% endwith %}
+
+
   <!-- Horizontal rule -->
    <div class="container">
     <hr class="my-0">
@@ -133,6 +144,7 @@
               <li><a href="{{url_for('about') }}" class="text-primary text-decoration-none">About</a></li>
               <li><a href="{{url_for('faqs') }}" class="text-primary text-decoration-none">FAQs</a></li>
               <li><a href="{{url_for('dr_deals') }}" class="text-primary text-decoration-none">Our Deals</a></li>
+              <li><a href="{{url_for('register') }}" class="text-primary text-decoration-none">Register</a></li>
             </ul>
           </div>
     
