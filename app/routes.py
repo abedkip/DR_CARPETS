@@ -1,6 +1,11 @@
 from app import app, db
-from flask import render_template, session
-from app.models import CartItem  # Import the CartItem model
+from flask import render_template, session, flash, url_for, redirect, request
+from app.models import CartItem, User # Import the CartItem model
+from app.forms import RegistrationForm
+from werkzeug.security import generate_password_hash
+
+
+
 
 
 @app.route('/')
@@ -131,9 +136,21 @@ def dr_deals():
 
 
 # REGISTRATION ROUTE
-
-
-
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+       new_user = User(
+       username=form.username.data,
+       email=form.email.data,
+       password=form.password.data
+    )
+       db.session.add(new_user)
+       db.session.commit()
+       flash(f'{new_user.username} successfully registered!', 'success')
+       return redirect(url_for('Home'))
+    print(form.errors)
+    return render_template('register.html', title='Register', user_form=form)
 
 
 
