@@ -1,8 +1,8 @@
 from app import app, db
 from flask import render_template, session, flash, url_for, redirect, request
 from app.models import CartItem, User # Import the CartItem model
-from app.forms import RegistrationForm
-from werkzeug.security import generate_password_hash
+from app.forms import RegistrationForm, LoginForm
+from flask_login import login_user,login_required, logout_user, current_user
 
 
 
@@ -153,8 +153,36 @@ def register():
     return render_template('register.html', title='Register', user_form=form)
 
 
+# LOGIN ROUTE
+@app.route('/login', methods=['GET', 'POST'])
+
+def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+    
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user and user.password == form.password.data:
+            login_user(user)
+            flash(f"Welcome Back {user.username}", 'success')
+            return redirect(url_for('home'))
+        else:
+            flash(f"Failed to login,Check your login details and try again!", 'danger')
+        
+    return render_template('login.html', title='Login', login_form=form)
 
 
+
+#   LOGOUT ROUTE
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash(f"logged out successfully", 'success')    
+    return redirect(url_for('home'))
+    
+    
 
 
 
