@@ -174,6 +174,8 @@ def login():
 
 
 
+
+
 #   LOGOUT ROUTE
 @app.route('/logout')
 @login_required
@@ -203,22 +205,3 @@ def logout():
 
 
 
-# Add item to cart
-def add_to_basket(product_id, quantity):
-    cart = session.get('cart', {})
-    cart[product_id] = cart.get(product_id, 0) + quantity
-    session['cart'] = cart
-
-# Get cart
-def get_cart():
-    return session.get('cart', {})
-
-# Adding to cart
-def add_to_cart(user_id, product_id, quantity):
-    item = CartItem.query.filter_by(user_id=user_id, product_id=product_id).first()
-    if item:
-        item.quantity += quantity
-    else:
-        item = CartItem(user_id=user_id, product_id=product_id, quantity=quantity)
-        db.session.add(item)
-    db.session.commit()
