@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}{{ color.capitalize() }} Carpets{% endblock %}
+
+{% block content %}
+<h1 class="text-center">{{ color.capitalize() }} Carpets</h1>
+
+<div class="container">
+  <div class="row">
+    {% for item in products %}
+    <div class="col-sm-6 mb-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <h5 class="ms-lg-4 text-success"><span class="text-dark">Ksh</span>{{ item.price }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
